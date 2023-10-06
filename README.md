@@ -1,6 +1,6 @@
 # Developing a Simple Webserver
-Name: Karthi Govindharaju
-ID: ISAI005
+Name: Thrishendra
+ID: 23003501
 
 # AIM:
 
@@ -28,9 +28,32 @@ Serving the HTML pages.
 
 Testing the webserver
 # PROGRAM:
-Type your code here
-# OUTPUT:
+from http.server import HTTPServer , BaseHTTPRequestHandler
 
+content="""
+<html>
+<head>
+</head>
+<body>
+<h1>welcome</h1>
+</body>
+</html>
+"""
+
+class HelloHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("Get request recieved")
+        self.send_response(200)
+        self.send_header('Content-type','text/html;charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+
+print("This is my webserver")
+server_address = ('',80)
+httpd = HTTPServer(server_address,HelloHandler)
+httpd.serve.forever()
+# OUTPUT:
+![AltText](images/Screenshot%202023-10-06%20101834.png)
 # RESULT:
 
 The program is executed succesfully
