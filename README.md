@@ -67,7 +67,8 @@ httpd.serve_forever()
 
 
 # OUTPUT:
-![output](images/Screenshot%202023-10-18%20132710.png)
+![WhatsApp Image 2023-10-18 at 22 03 53_1450ebd3](https://github.com/Thrishendra/Web_server/assets/145742464/eb63d42d-b856-43a2-a1ef-a3658998be70)
+
 # RESULT:
 
 The program is executed succesfully.
