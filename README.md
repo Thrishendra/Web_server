@@ -1,7 +1,9 @@
 # Developing a Simple Webserver
-Name: Thrishendra
-ID: 23003501
+Name : T Thrishendra 
 
+ID : 23003501
+
+Dept : AIDS
 # AIM:
 
 Develop a webserver to display about top five web application development frameworks.
@@ -28,32 +30,44 @@ Serving the HTML pages.
 
 Testing the webserver
 # PROGRAM:
-from http.server import HTTPServer , BaseHTTPRequestHandler
 
-content="""
+```
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+content = """
 <html>
 <head>
 </head>
 <body>
-<h1>welcome</h1>
+<h1>Top Five Web Application Development Frameworks</h1>
+
+<h1>1. Django</h1>
+<h1>2. MEAN Stack</h1>
+<h1>3. React</h1>
+<h1>4. Ruby on Rails</h1>
+<h1>5. Angular</h1>
+
 </body>
 </html>
 """
 
 class HelloHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        print("Get request recieved")
+        print("Get request received")
         self.send_response(200)
-        self.send_header('Content-type','text/html;charset=utf-8')
+        self.send_header('Content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
 
-print("This is my webserver")
-server_address = ('',80)
-httpd = HTTPServer(server_address,HelloHandler)
-httpd.serve.forever()
+print("This is my web server")
+server_address = ('', 80)
+httpd = HTTPServer(server_address, HelloHandler)
+httpd.serve_forever()
+```
+
+
 # OUTPUT:
-![AltText](images/Screenshot%202023-10-06%20101834.png)
+![output](images/Screenshot%202023-10-18%20132710.png)
 # RESULT:
 
-The program is executed succesfully
+The program is executed succesfully.
